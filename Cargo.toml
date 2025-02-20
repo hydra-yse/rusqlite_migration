@@ -19,6 +19,10 @@ members = [
 # https://doc.rust-lang.org/cargo/reference/resolver.html#feature-resolver-version-2
 resolver = "2"
 
+[workspace.dependencies]
+rusqlite = { git = "https://github.com/Spxg/rusqlite", rev = "e36644127f31fa6e7ea0999b59432deb4a07f220" }
+tokio-rusqlite = { git = "https://github.com/hydra-yse/tokio-rusqlite", branch = "rusqlite-v0.33.0" }
+
 [workspace.lints.rust]
 unsafe_code = "forbid"
 missing_docs = "warn"

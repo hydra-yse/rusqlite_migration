@@ -15,17 +15,14 @@ rust-version.workspace = true
 version.workspace = true
 
 [dependencies]
-tokio = { version = "1.43", features = ["macros"] }
-tokio-rusqlite = { version = "0.6.0" }
+tokio = { version = "1.42.0", features = ["macros"] }
+rusqlite = { workspace = true, features = ["extra_check"] }
+tokio-rusqlite = { workspace = true }
 log = "0.4"
 
 [dependencies.rusqlite_migration]
 path = "../rusqlite_migration"
 features = ["alpha-async-tokio-rusqlite", "from-directory"]
-
-[dependencies.rusqlite]
-version = "0.32.1"
-features = ["extra_check"]
 
 [dev-dependencies]
 tokio-test = "0.4.4"
